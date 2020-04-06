@@ -4,13 +4,28 @@
 #define M 5
 
 int main(){
-int f,c;
+int f=0;int c=0;
 double mt[N][M];//matriz
+
 for(f = 0;f<N; f++){
-	for(f = 0;f<M; f++){
-		cprintf(“%lf ”, mt[f][c]);
+	for(c = 0;c<M; c++){
+		if(f==0){
+			mt[f][c] = c;
+		}else if(f==1){
+			mt[f][c] = c+5;
+		}else if(f==2){
+			mt[f][c] = c+10;
+		}else if(f==3){
+			mt[f][c] = c+15;
+		}
 	}
-cprintf(“\n”);
+}
+
+for(f = 0;f<N; f++){
+	for(c = 0;c<M; c++){
+		printf("%.1lf - ", mt[f][c]);
+	}
+printf("\n");
 }
 
 
